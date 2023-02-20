@@ -1,23 +1,29 @@
 package com.example.skeleton.domain.enteties;
 
 import jakarta.annotation.Nullable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 import java.util.Set;
 
-@Nullable
+@Entity
 public class User {
+    @Id
     private Long id;
     private String firstName;
     private String lastName;
     private String email;
-    private Set<Role> roles;
+    //private Set<Role> roles;
 
-    public User(Long id, String firstName, String lastName, String email, Set<Role> roles) {
+    public User(Long id, String firstName, String lastName, String email){//, Set<Role> roles) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.roles = roles;
+       // this.roles = roles;
+    }
+
+    public User() {
     }
 
     public Long getId() {
@@ -52,11 +58,4 @@ public class User {
         this.email = email;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
 }
