@@ -13,11 +13,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public User registerUser(RegistrationDto dto){
-        User user = new User();
-        user.setFirstName(dto.getFirstName());
-        user.setLastName(dto.getLastName());
-        user.setEmail(dto.getEmail());
+    public User registerUser(User user){
         return userRepository.save(user);
     }
 }

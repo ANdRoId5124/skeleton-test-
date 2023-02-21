@@ -1,14 +1,14 @@
 package com.example.skeleton.domain.enteties;
 
-import jakarta.annotation.Nullable;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Set;
 
 @Entity
+@Table(name = "user_test")
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String firstName;
     private String lastName;

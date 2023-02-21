@@ -1,18 +1,17 @@
 package com.example.skeleton.Dto;
 
 public class RegistrationDto {
-    private String login;
+    private String email;
     private String password;
     private String firstName;
     private String lastName;
-    private String email;
 
-    public String getLogin() {
-        return login;
+    public String getEmail() {
+        return email;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -39,11 +38,5 @@ public class RegistrationDto {
         this.lastName = lastName;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 }
